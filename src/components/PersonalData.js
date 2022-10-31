@@ -1,27 +1,61 @@
+import { useState } from 'react'
+
 function PersonalData() {
+    const [name, setName] = useState('');
+
+    const [lastName, setLastName] = useState('');
+
+    const [password, setPassword] = useState('');
+
+    const [email, setEmail] = useState('');
+
+    const [date, setDate] = useState('');
+
+    const handleChangeName = (event) => {
+        setName(event.target.value)
+    }
+
+    const handleChangeLastName = (event) => {
+        setLastName (event.target.value)
+    }
+
+    const handleChangePassword = (event) => {
+        setPassword (event.target.value)
+    }
+
+    const handleChangeEmail = (event) => {
+        setEmail (event.target.value)
+    }
+
+    const handleChangeDate = (event) => {
+        setDate (event.target.value)
+    }
+
     return (
         <section>
             <ul>
-                <h3>Dados Pessoais</h3>
+                <h2>Dados Pessoais</h2>
                 <li>
-                    <label for="fn">Nome</label>
-                    <input type="text" required id="fn" name="firstname" placeholder="Digite seu nome" autofocus />
+                    <label for="fn">Nome: </label>
+                    <input type="text" onChange={handleChangeName} value={name} required id="fn" placeholder="Digite seu nome" autofocus />
+                    {name}
                 </li>
                 <li>
-                    <label for="ln">Sobrenome</label>
-                    <input type="text" required id="ln" name="lastname" placeholder="Digite seu sobrenome" />
+                    <label for="ln">Sobrenome: </label>
+                    <input type="text" onChange={handleChangeLastName} value={lastName} required id="ln" placeholder="Digite seu sobrenome" />
+                    {lastName}
                 </li>
                 <li>
-                    <label for="pw">Senha</label>
-                    <input type="password" required id="pw" name="password" placeholder="Digite sua senha" />
+                    <label for="pw">Senha: </label>
+                    <input type="password" onChange={handleChangePassword} value={password} required id="pw" placeholder="Digite sua senha" />
                 </li>
                 <li>
-                    <label for="ml">Email</label>
-                    <input type="email" required id="ml" name="email" placeholder="Digite seu email" />
+                    <label for="ml">Email: </label>
+                    <input type="email" onChange={handleChangeEmail} value={email} required id="ml" placeholder="Digite seu email" />
                 </li>
                 <li>
-                    <label for="dt">Data de Nascimento</label>
-                    <input type="date" required id="dt" name="date" />
+                    <label for="dt">Data de Nascimento: </label>
+                    <input type="date" onChange={handleChangeDate} value={date} required id="dt" />
                 </li>
             </ul>
         </section>

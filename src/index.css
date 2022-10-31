@@ -6,11 +6,6 @@ body {
   background-size: cover;
 }
 
-body, input {
-  font-family: Montserrat, Aboreto, sans-serif;
-  font-size: large;
-}
-
 section {
   display: inline-flex;
   justify-content: center;
@@ -24,16 +19,13 @@ h1 {
   font-size: 50px;
   text-align: center;
   padding-top: 35px;
-  color: white;
 }
 
-h3 {
+h2 {
   text-align: center;
 }
 
 ul {
-  border: 3px solid green;
-  background-color: aquamarine;
   position: relative;
   display: inline-block;
   height: 400px;
@@ -45,11 +37,54 @@ ul {
 
 li {
   padding: 15px;
+  padding-left: 50px;
 }
 
-#send {
+#submit {
   margin: auto;
   width: 50%;
   align-items: center;
   text-align: center;
+}
+
+input[type=submit] {
+  padding: 16px 32px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+body, input, select, label {
+  font-family: Montserrat, Aboreto, sans-serif;
+  font-size: large;
+}
+
+h1, h2, label, input[type=submit] {
+  color: white
+}
+
+ul, input[type=submit] {
+  border: 5px solid white;
+  background-color: rgb(4, 170, 109, 0.8);
+  border-radius: 50px;
+}
+
+input, select {
+  border-radius: 15px 50px;
+  padding-left: 10px;
+  transition: 0.3s;
+}
+
+input[type=submit]:hover {
+  border: 5px solid rgb(4, 170, 109, 0.8);
+  background-color: white;
+  color: rgb(4, 170, 109, 0.8);
+  transform: scale(1.2);
+}
+
+select:hover, input:hover {
+  border: 1px solid black;
+  background-color: white;
+  color: rgb(4, 170, 109, 0.8);
+  transform: scale(1.1);
+  margin-left: 20px;
 }
