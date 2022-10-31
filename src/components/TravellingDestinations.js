@@ -15,12 +15,6 @@ function TravellingDestinations() {
                     <CountryField setCountryCode={setCountryCode} />
                 </li>
                 <li>
-                    <label for="state">Estado: </label>
-                    <select required id="state">
-                        <option disabled selected>Selecione o estado desejado</option>
-                    </select>
-                </li>
-                <li>
                     <CityField setCityCode={setCityCode/*.filter (setCountryCode)*/} />
                 </li>
             </ul>

@@ -26,15 +26,14 @@ function CityField ({ setCityCode }) {
 
     return (
         <div>
-            <label for="city">Cidade: </label>
-            <select required id="city" onChange={handleChangeSelectedCity}>
-                <option disabled selected value="">Selecione a cidade desejada</option>
-                {cityList.map(( city ) => 
-                    <option value={city.name_ptbr}>{city.name_ptbr}</option>
-                )}
+            <label for="city">Estado/Cidade: </label>
+            <select required id="city" onChange={handleChangeSelectedCity} style={{maxWidth: "70%"}}>
+            {isCityLoading && <option disabled selected value="">Loading...</option>}
+            {!isCityLoading && <option disabled selected value="">Selecione o estado e cidade desejados</option>}
+            {cityList.map(( city ) => 
+                <option value={city.name_ptbr}>{city.name_ptbr}</option>
+            )}
             </select>
-            {isCityLoading && 'Loading...'}
-            {selectedCity}
         </div>
     );
 }

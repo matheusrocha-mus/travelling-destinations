@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 function PersonalData() {
-    const [name, setName] = useState('');
+    const [firstName, setFirstName] = useState('');
 
     const [lastName, setLastName] = useState('');
 
@@ -11,8 +11,8 @@ function PersonalData() {
 
     const [date, setDate] = useState('');
 
-    const handleChangeName = (event) => {
-        setName(event.target.value)
+    const handleChangeFirstName = (event) => {
+        setFirstName(event.target.value)
     }
 
     const handleChangeLastName = (event) => {
@@ -37,13 +37,11 @@ function PersonalData() {
                 <h2>Dados Pessoais</h2>
                 <li>
                     <label for="fn">Nome: </label>
-                    <input type="text" onChange={handleChangeName} value={name} required id="fn" placeholder="Digite seu nome" autofocus />
-                    {name}
+                    <input type="text" onChange={handleChangeFirstName} value={firstName} required id="fn" placeholder="Digite seu nome" autofocus />
                 </li>
                 <li>
                     <label for="ln">Sobrenome: </label>
                     <input type="text" onChange={handleChangeLastName} value={lastName} required id="ln" placeholder="Digite seu sobrenome" />
-                    {lastName}
                 </li>
                 <li>
                     <label for="pw">Senha: </label>

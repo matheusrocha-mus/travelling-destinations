@@ -28,13 +28,12 @@ function CountryField ({ setCountryCode }) {
         <div>
             <label for="country">País: </label>
             <select required id="country" onChange={handleChangeSelectedCountry}>
-                <option disabled selected value="">Selecione o país desejado</option>
-                {countryList.map(( country ) => 
-                    <option value={country.name_ptbr}>{country.name_ptbr}</option>
-                )}
+            {isCountryLoading && <option disabled selected value="">Loading...</option>}
+            {!isCountryLoading && <option disabled selected value="">Selecione o país desejado</option>}
+            {countryList.map(( country ) => 
+                <option value={country.name_ptbr}>{country.name_ptbr}</option>
+            )}
             </select>
-            {isCountryLoading && 'Loading...'}
-            {selectedCountry}
         </div>
     );
 }
