@@ -68,7 +68,7 @@ h1, h2, label, input[type=submit] {
 
 ul, input[type=submit] {
   border: 5px solid white;
-  background-color: rgb(4, 170, 109, 0.8);
+  background-color: rgba(4, 145, 170, 0.8);
   border-radius: 50px;
 }
 
@@ -79,16 +79,20 @@ input, select {
 }
 
 input[type=submit]:hover {
-  border: 5px solid rgb(4, 170, 109, 0.8);
+  border: 5px solid rgba(4, 145, 170, 0.8);
   background-color: white;
-  color: rgb(4, 170, 109, 0.8);
+  color: rgba(4, 145, 170, 0.8);
   transform: scale(1.2);
 }
 
 select:hover, input:hover {
   border: 1px solid black;
   background-color: white;
-  color: rgb(4, 170, 109, 0.8);
+  color: rgba(4, 145, 170, 0.8);
   transform: scale(1.1);
   margin-left: 20px;
+}
+
+input:hover::placeholder {
+  color: rgba(4, 145, 170, 0.8);
 }
