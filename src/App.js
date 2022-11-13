@@ -3,8 +3,15 @@ import TravellingDestinations from "./components/TravellingDestinations";
 /*import UserData from "./components/UserData"*/
 
 function App() {
-/*  function handleSubmit () {
+/*  function SubmitHandler () {
     <UserData />
+
+    const [submit, setSubmit] = useState('');
+
+    const handleChangeSubmit = (event) => {
+        setSubmit(event.target.value)
+    }
+
   }*/
 
   return (
@@ -13,7 +20,7 @@ function App() {
       <PersonalData />
       <TravellingDestinations />
       <div className="submit">
-        <input type="submit" value="Enviar" name="submit"/* onClick={handleSubmit}*/ />
+        <input type="submit" value="Enviar" name="submit"/* onClick={handleChangeSubmit}*/ />
       </div>
     </form>
   );
